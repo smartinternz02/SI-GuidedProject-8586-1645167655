@@ -1,0 +1,91 @@
+
+
+
+
+
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Employee Attrition Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+ <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Employee Attrition Predictor</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+<input class="form-input" type="text" name="Age" placeholder="Enter your age"><br>
+
+<select id="Department" name="Department">
+ <option value="">Select your department</option>
+    <option value="1">Research & Development</option>
+    <option value="2">Sales</option>
+<option value="0">Human Resources</option>
+   
+  </select><br>
+
+<select id="EducationField" name="EducationField">
+    <option value="">Select your Education Field</option>
+    <option value="1">Life Sciences</option>
+<option value="3">Medical</option>
+    <option value="2">Marketing</option>
+<option value="5">Technical Degree</option>
+    <option value="0">Human Resources</option>
+<option value="4">Other</option>
+  </select><br>
+
+<select id="JobLevel" name="JobLevel">
+    <option value="">Select your Job Level</option>
+    <option value="1">Below College</option>
+<option value="2">College</option>
+    <option value="3">Bachelor</option>
+    <option value="4">Master</option>
+<option value="5">Doctor</option>
+    
+  </select><br>
+
+<select id="JobRole" name="JobRole">
+    <option value="">Select your Job Role</option>
+    <option value="7">Sales Executive</option>
+<option value="6">Research Scientist</option>
+    <option value="2">Laboratory Technician</option>
+<option value="5">Research Director'</option>
+    <option value="0">Healthcare Representative</option>
+<option value="4">Manufacturing Director</option>
+<option value="3">Manager</option>
+<option value="8">Sales Representative</option>
+<option value="1">Human Resources</option>
+  </select><br>
+
+
+                <input class="form-input" type="text" name="MonthlyIncome" placeholder="Enter the Monthly Income"><br>  
+
+
+
+<select id="PerformanceRating" name="PerformanceRating">
+<option value="">Select your performance rating</option>
+    <option value="3">Excellent</option>
+    <option value="4">Outstanding</option>
+  </select><br>
+
+<input class="form-input" type="text" name="TrainingTimesLastYear" placeholder="Enter the TrainingTimesLastYear"><br>
+
+<input class="form-input" type="text" name="YearsAtCompany" placeholder="Enter the YearsAtCompany"><br>
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    
+    </body>
+</html>

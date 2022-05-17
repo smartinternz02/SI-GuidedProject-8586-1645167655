@@ -1,0 +1,79 @@
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Employee Attrition Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.jpg') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+ <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Employee Attrition Predictor</span></h2>
+            <div class='description'>
+    			<br><br><p>A Machine Learning Web App, Built with Flask</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+			
+	<select id="Education" name="Education">
+		<option value="">Select your Education</option>
+		<option value="0">Bachelor</option>
+		<option value="1">Below College</option>
+		<option value="2">College</option>
+		<option value="3">Doctor</option>
+		<option value="4">Master</option>
+	
+    
+    </select><br>
+  
+  
+  <select id="JobInvolvement" name="JobInvolvement">
+    <option value="">Select your Job Involvement</option>
+    <option value="0">High</option>
+	<option value="1">Low</option>
+	<option value="2">Medium</option>
+    <option value="3">Very Hight</option>
+    
+    
+  </select><br>
+  
+  <select id="JobLevel" name="JobLevel">
+    <option value="">Select your Job level</option>
+    <option value="0">1</option>
+	<option value="1">2</option>
+    <option value="2">3</option>
+    <option value="3">4</option>
+	<option value="4">5</option>
+    
+  </select><br>
+			
+<input class="form-input" type="text" name="DailyRate(USD)" placeholder="Enter your Daily Rate(USD)"><br>
+<input class="form-input" type="text" name="MonthlyIncome(USD)" placeholder="Enter your Monthly Income(USD)"><br>
+<input class="form-input" type="text" name="NoofCompaniesWorked" placeholder="Enter No of Companies Worked"><br>
+<input class="form-input" type="text" name="TotalWorkingYears" placeholder="Enter your Total Working Years"><br>
+<input class="form-input" type="text" name="YearsAtCompany" placeholder="Enter Years At Company"><br>
+<input class="form-input" type="text" name="YearsInCurrentRole" placeholder="Enter YearsIn Current Role"><br>
+<input class="form-input" type="text" name="YearsSinceLastPromotion" placeholder="Enter Years Since Last Promotion"><br>
+<input class="form-input" type="text" name="YearsWithCurrentManager" placeholder="Years With Current Manager"><br>
+<input class="form-input" type="text" name="TrainingTimesLastYear" placeholder="Training Times Last Year"><br>
+
+
+
+<select id="PerformanceRating" name="PerformanceRating">
+<option value="">Select your performance rating</option>
+    <option value="0">Excellent</option>
+    <option value="1">Outstanding</option>
+  </select><br>
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    
+    </body>
+</html>
